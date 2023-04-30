@@ -3,6 +3,7 @@ import { Hero } from 'components/Hero/Hero';
 import { LogoComponent } from 'components/Logo/Logo';
 import { AvatarBg, AvatarCover, Delimiter } from './Twit.styled';
 import { UserAvatar } from 'components/UserAvatar/UserAvatar';
+import { StatisticInfo } from 'components/StatisticInfo/StatisticInfo';
 
 export const Twit = () => {
   return (
@@ -25,6 +26,7 @@ export const Twit = () => {
           <UserAvatar />
         </AvatarBg>
       </AvatarCover>
+      <StatisticInfo />
     </Box>
   );
 };
