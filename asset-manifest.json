@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/twits-testwork/static/css/main.7acaea2f.css",
+    "main.js": "/twits-testwork/static/js/main.07d3183d.js",
+    "index.html": "/twits-testwork/index.html",
+    "main.7acaea2f.css.map": "/twits-testwork/static/css/main.7acaea2f.css.map",
+    "main.07d3183d.js.map": "/twits-testwork/static/js/main.07d3183d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.07d3183d.js"
+  ]
+}
