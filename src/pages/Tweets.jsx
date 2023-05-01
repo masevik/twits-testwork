@@ -27,15 +27,14 @@ const Tweets = () => {
   }, [page]);
 
   const pageCount = () => {
-    console.log(111);
     setPage(prevState => prevState + 1);
   };
 
   return (
     <Container>
-      <Box display="flex" alignItems="center" flexDirection="column">
+      <Box display="flex" flexDirection="column">
         <UserList users={users} />
-        <Box display="flex" mb="32px" max-width="450px">
+        <Box display="flex" mb="32px" max-width="450px" ml="auto" mr="auto">
           <Link to="/">Home</Link>
           {users.length > 0 && page < total / 3 && (
             <Button onClick={pageCount}>Load more</Button>
