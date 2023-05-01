@@ -8,6 +8,7 @@ export const StyledButton = styled.button`
   text-transform: uppercase;
   border: none;
   border-radius: 10.31px;
+  margin-top: 26px;
   margin-left: auto;
   margin-right: auto;
   font-size: 18px;

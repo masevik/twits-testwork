@@ -9,6 +9,7 @@ import {
   flexbox,
   background,
   position,
+  grid,
 } from 'styled-system';
 
 export const Box = styled.div`
@@ -21,4 +22,5 @@ export const Box = styled.div`
   ${flexbox}
   ${background}
   ${position}
+  ${grid}
 `;

@@ -11,6 +11,7 @@ export const StyledNavLink = styled(NavLink)`
   text-align: center;
   border: none;
   border-radius: 10.31px;
+  margin-top: 26px;
   margin-left: auto;
   margin-right: auto;
   font-size: 18px;
@@ -23,16 +24,16 @@ export const StyledNavLink = styled(NavLink)`
   @media screen and (max-width: 425px) {
     width: 150px;
     padding: 12px 15px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
   }
 
-  @media screen and (min-width: 425px) {
+  /* @media screen and (min-width: 425px) {
     margin-right: 16px;
-  }
+  } */
 
-  @media screen and (min-width: 768px) {
+  /* @media screen and (min-width: 768px) {
     margin-right: 32px;
-  }
+  } */
 
   :hover,
   :focus {

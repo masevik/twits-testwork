@@ -36,11 +36,11 @@ const Tweets = () => {
         <UserList users={users} />
         <Box
           display="flex"
-          mb="32px"
           max-width="392px"
           ml="auto"
           mr="auto"
-          gap="32px"
+          gridColumnGap="16px"
+          pb="26px"
         >
           <Link to="/">Home</Link>
           {users.length > 0 && page < total / 3 && (

@@ -6,5 +6,4 @@ export const UserListStyled = styled.ul`
   flex-wrap: wrap;
   justify-content: center;
   gap: 32px;
-  padding-bottom: 32px;
 `;
