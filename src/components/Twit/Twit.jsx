@@ -5,9 +5,15 @@ import { AvatarBg, AvatarCover, Delimiter } from './Twit.styled';
 import { UserAvatar } from 'components/UserAvatar/UserAvatar';
 import { StatisticInfo } from 'components/StatisticInfo/StatisticInfo';
 import { Button } from 'components/Button/Button';
+import { useState } from 'react';
 
 export const Twit = ({ user }) => {
+  const [status, setStatus] = useState(false);
   const { tweets, followers, avatar } = user;
+
+  const follow = () => {
+    setStatus(prevState => !prevState);
+  };
 
   return (
     <Box
@@ -31,7 +37,7 @@ export const Twit = ({ user }) => {
         </AvatarBg>
       </AvatarCover>
       <StatisticInfo data={{ tweets, followers }} />
-      <Button>Follow</Button>
+      <Button onClick={follow}>{!status ? 'Follow' : 'Following'}</Button>
     </Box>
   );
 };
