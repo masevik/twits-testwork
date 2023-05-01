@@ -34,7 +34,14 @@ const Tweets = () => {
     <Container>
       <Box display="flex" flexDirection="column">
         <UserList users={users} />
-        <Box display="flex" mb="32px" max-width="450px" ml="auto" mr="auto">
+        <Box
+          display="flex"
+          mb="32px"
+          max-width="392px"
+          ml="auto"
+          mr="auto"
+          gap="32px"
+        >
           <Link to="/">Home</Link>
           {users.length > 0 && page < total / 3 && (
             <Button onClick={pageCount}>Load more</Button>

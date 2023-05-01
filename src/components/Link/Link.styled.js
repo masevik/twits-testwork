@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 export const StyledNavLink = styled(NavLink)`
   display: block;
-  margin-right: 32px;
   width: 196px;
   height: 50px;
   padding: 14px 28px;
@@ -21,12 +20,17 @@ export const StyledNavLink = styled(NavLink)`
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
   transition-duration: 300ms;
 
-  @media screen and (max-width: 380px) {
-    margin-right: 15px;
+  @media screen and (max-width: 425px) {
     width: 150px;
+    padding: 12px 15px;
+    margin-right: 10px;
   }
 
-  @media screen and (min-width: 380px) {
+  @media screen and (min-width: 425px) {
+    margin-right: 16px;
+  }
+
+  @media screen and (min-width: 768px) {
     margin-right: 32px;
   }
 

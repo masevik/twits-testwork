@@ -1,11 +1,15 @@
+import { Box } from 'components/Box';
 import { Container } from 'components/Container/Container';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'components/Link/Link';
 
 const Home = () => {
   return (
     <Container>
-      <h1>Home</h1>
-      <NavLink to="/tweets">To Tweets</NavLink>
+      <Box display="flex" alignItems="center" flexDirection="column">
+        <h1>Subscribe to something interesting</h1>
+        <h2>Press the button</h2>
+        <Link to="/tweets">To Tweets</Link>
+      </Box>
     </Container>
   );
 };
