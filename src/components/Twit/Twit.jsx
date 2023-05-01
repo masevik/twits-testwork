@@ -38,7 +38,9 @@ export const Twit = ({ user, onClick }) => {
         </AvatarBg>
       </AvatarCover>
       <StatisticInfo data={{ tweets, followers }} />
-      <Button onClick={follow}>{!status ? 'Follow' : 'Following'}</Button>
+      <Button onClick={follow} status={status}>
+        {!status ? 'Follow' : 'Following'}
+      </Button>
     </Box>
   );
 };
