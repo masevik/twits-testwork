@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/twits-testwork/static/css/main.c3d5249d.css",
-    "main.js": "/twits-testwork/static/js/main.c73a470d.js",
+    "main.js": "/twits-testwork/static/js/main.5f53b29d.js",
     "static/media/Hero.png": "/twits-testwork/static/media/Hero.032662a2a907475127d7.png",
     "index.html": "/twits-testwork/index.html",
     "main.c3d5249d.css.map": "/twits-testwork/static/css/main.c3d5249d.css.map",
-    "main.c73a470d.js.map": "/twits-testwork/static/js/main.c73a470d.js.map"
+    "main.5f53b29d.js.map": "/twits-testwork/static/js/main.5f53b29d.js.map"
   },
   "entrypoints": [
     "static/css/main.c3d5249d.css",
-    "static/js/main.c73a470d.js"
+    "static/js/main.5f53b29d.js"
   ]
 }
