@@ -4,6 +4,7 @@ import { LogoComponent } from 'components/Logo/Logo';
 import { AvatarBg, AvatarCover, Delimiter } from './Twit.styled';
 import { UserAvatar } from 'components/UserAvatar/UserAvatar';
 import { StatisticInfo } from 'components/StatisticInfo/StatisticInfo';
+import { FollowButton } from 'components/Button/Button';
 
 export const Twit = () => {
   return (
@@ -27,6 +28,7 @@ export const Twit = () => {
         </AvatarBg>
       </AvatarCover>
       <StatisticInfo />
+      <FollowButton />
     </Box>
   );
 };
