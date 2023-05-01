@@ -11,6 +11,21 @@ const Tweets = () => {
   const [page, setPage] = useState(1);
   const [total, setTotal] = useState(0);
 
+  const handleClick = (status, name) => {
+    if (status === true) {
+      users.forEach(user => {
+        if (user.name === name) {
+          user.followers += 1;
+        }
+      });
+    } else
+      users.forEach(user => {
+        if (user.name === name) {
+          user.followers -= 1;
+        }
+      });
+  };
+
   useEffect(() => {
     const getUsers = async () => {
       try {
@@ -32,8 +47,8 @@ const Tweets = () => {
 
   return (
     <Container>
-      <Box display="flex" flexDirection="column">
-        <UserList users={users} />
+      <Box display="flex" flexDirection="column" as="main">
+        <UserList users={users} onClick={handleClick} />
         <Box
           display="flex"
           max-width="392px"
@@ -42,7 +57,7 @@ const Tweets = () => {
           gridColumnGap="16px"
           pb="26px"
         >
-          <Link to="/">Home</Link>
+          <Link to="/">Back</Link>
           {users.length > 0 && page < total / 3 && (
             <Button onClick={pageCount}>Load more</Button>
           )}

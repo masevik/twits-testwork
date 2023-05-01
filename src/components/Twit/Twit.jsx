@@ -7,12 +7,13 @@ import { StatisticInfo } from 'components/StatisticInfo/StatisticInfo';
 import { Button } from 'components/Button/Button';
 import { useState } from 'react';
 
-export const Twit = ({ user }) => {
+export const Twit = ({ user, onClick }) => {
   const [status, setStatus] = useState(false);
-  const { tweets, followers, avatar } = user;
+  const { name, tweets, followers, avatar } = user;
 
   const follow = () => {
     setStatus(prevState => !prevState);
+    onClick(!status, name);
   };
 
   return (

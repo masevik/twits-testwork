@@ -1,5 +1,5 @@
 import { Twit } from 'components/Twit/Twit';
 
-export const UserListItem = ({ user }) => {
-  return <Twit user={user} />;
+export const UserListItem = ({ user, onClick }) => {
+  return <Twit user={user} onClick={onClick} />;
 };
