@@ -30,7 +30,7 @@ export const Twit = ({ user }) => {
           <UserAvatar avatar={avatar} />
         </AvatarBg>
       </AvatarCover>
-      <StatisticInfo data={(tweets, followers)} />
+      <StatisticInfo data={{ tweets, followers }} />
       <FollowButton />
     </Box>
   );
