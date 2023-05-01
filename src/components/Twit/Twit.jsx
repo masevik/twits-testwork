@@ -6,7 +6,9 @@ import { UserAvatar } from 'components/UserAvatar/UserAvatar';
 import { StatisticInfo } from 'components/StatisticInfo/StatisticInfo';
 import { FollowButton } from 'components/Button/Button';
 
-export const Twit = () => {
+export const Twit = ({ user }) => {
+  const { tweets, followers, avatar } = user;
+
   return (
     <Box
       position="relative"
@@ -18,16 +20,17 @@ export const Twit = () => {
       mr="auto"
       ml="auto"
       pt="28px"
+      as="li"
     >
       <LogoComponent />
       <Hero />
       <Delimiter />
       <AvatarCover>
         <AvatarBg>
-          <UserAvatar />
+          <UserAvatar avatar={avatar} />
         </AvatarBg>
       </AvatarCover>
-      <StatisticInfo />
+      <StatisticInfo data={(tweets, followers)} />
       <FollowButton />
     </Box>
   );

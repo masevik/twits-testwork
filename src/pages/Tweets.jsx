@@ -1,5 +1,7 @@
-import { Twit } from '../components/Twit/Twit';
+import { Container } from 'components/Container/Container';
+import { UserList } from 'components/UserList/UserList';
 import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { fetchUsers } from 'services/API';
 
 const Tweets = () => {
@@ -18,12 +20,14 @@ const Tweets = () => {
     getUsers();
   }, []);
 
-  console.log(users);
-
   return (
-    <div>
-      <Twit />
-    </div>
+    <Container>
+      <UserList users={users} />
+      <div>
+        <NavLink to="/">Home</NavLink>
+        <button>Load more</button>
+      </div>
+    </Container>
   );
 };
 
