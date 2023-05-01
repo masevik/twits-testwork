@@ -1,5 +1,5 @@
-import { Button } from './Button.styled';
+import { StyledButton } from './Button.styled';
 
-export const FollowButton = () => {
-  return <Button>Follow</Button>;
+export const Button = ({ onClick, children }) => {
+  return <StyledButton onClick={onClick}>{children}</StyledButton>;
 };

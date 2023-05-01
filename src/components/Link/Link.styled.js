@@ -1,11 +1,15 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const StyledButton = styled.button`
+export const StyledNavLink = styled(NavLink)`
   display: block;
+  margin-right: 32px;
   width: 196px;
   height: 50px;
   padding: 14px 28px;
   text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
   border: none;
   border-radius: 10.31px;
   margin-left: auto;
@@ -18,8 +22,12 @@ export const StyledButton = styled.button`
   transition-duration: 300ms;
 
   @media screen and (max-width: 380px) {
+    margin-right: 15px;
     width: 150px;
-    padding: 12px 15px;
+  }
+
+  @media screen and (min-width: 380px) {
+    margin-right: 32px;
   }
 
   :hover,

@@ -4,7 +4,7 @@ import { LogoComponent } from 'components/Logo/Logo';
 import { AvatarBg, AvatarCover, Delimiter } from './Twit.styled';
 import { UserAvatar } from 'components/UserAvatar/UserAvatar';
 import { StatisticInfo } from 'components/StatisticInfo/StatisticInfo';
-import { FollowButton } from 'components/Button/Button';
+import { Button } from 'components/Button/Button';
 
 export const Twit = ({ user }) => {
   const { tweets, followers, avatar } = user;
@@ -31,7 +31,7 @@ export const Twit = ({ user }) => {
         </AvatarBg>
       </AvatarCover>
       <StatisticInfo data={{ tweets, followers }} />
-      <FollowButton />
+      <Button>Follow</Button>
     </Box>
   );
 };
