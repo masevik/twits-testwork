@@ -11,6 +11,8 @@ export const Twit = ({ user, onClick }) => {
   const [status, setStatus] = useState(false);
   const { name, tweets, followers, avatar } = user;
 
+  const color = !status ? '#ebd8ff' : '#5cd3a8';
+
   const follow = () => {
     setStatus(prevState => !prevState);
     onClick(!status, name);
@@ -38,7 +40,7 @@ export const Twit = ({ user, onClick }) => {
         </AvatarBg>
       </AvatarCover>
       <StatisticInfo data={{ tweets, followers }} />
-      <Button onClick={follow} status={status}>
+      <Button style={{ background: color }} onClick={follow} status={status}>
         {!status ? 'Follow' : 'Following'}
       </Button>
     </Box>

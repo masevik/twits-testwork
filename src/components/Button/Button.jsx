@@ -1,10 +1,8 @@
 import { StyledButton } from './Button.styled';
 
-export const Button = ({ onClick, children, status }) => {
-  const color = !status ? '#ebd8ff' : '#5cd3a8';
-
+export const Button = ({ onClick, children, style }) => {
   return (
-    <StyledButton style={{ background: color }} onClick={onClick}>
+    <StyledButton style={style} onClick={onClick}>
       {children}
     </StyledButton>
   );
