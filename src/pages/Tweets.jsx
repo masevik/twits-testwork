@@ -63,24 +63,26 @@ const Tweets = () => {
   };
 
   return (
-    <Container>
-      <Box display="flex" flexDirection="column" as="main">
-        <UserList users={users} onClick={handleClick} />
-        <Box
-          display="flex"
-          max-width="392px"
-          ml="auto"
-          mr="auto"
-          gridColumnGap="16px"
-          pb="26px"
-        >
-          <Link to="/">Back</Link>
-          {users.length > 0 && page < total / 3 && (
-            <Button onClick={pageCount}>Load more</Button>
-          )}
+    <Box background="linear-gradient(#568888 -10%, #4682b4 110%)">
+      <Container>
+        <Box display="flex" flexDirection="column" as="main">
+          <UserList users={users} onClick={handleClick} />
+          <Box
+            display="flex"
+            max-width="392px"
+            ml="auto"
+            mr="auto"
+            gridColumnGap="16px"
+            pb="26px"
+          >
+            <Link to="/">Back</Link>
+            {users.length > 0 && page < total / 3 && (
+              <Button onClick={pageCount}>Load more</Button>
+            )}
+          </Box>
         </Box>
-      </Box>
-    </Container>
+      </Container>
+    </Box>
   );
 };
 
