@@ -7,9 +7,41 @@ import { useEffect, useState } from 'react';
 import { fetchTotalUser, fetchUsers } from 'services/API';
 
 const Tweets = () => {
-  const [users, setUsers] = useState([]);
-  const [page, setPage] = useState(1);
-  const [total, setTotal] = useState(0);
+  const [page, setPage] = useState(0);
+  const [users, setUsers] = useState(() => {
+    const savedUsers = localStorage.getItem('users');
+    if (savedUsers !== null) {
+      return JSON.parse(savedUsers);
+    } else {
+      return [];
+    }
+  });
+
+  const [total, setTotal] = useState(1);
+
+  useEffect(() => {
+    if (users.length <= 0) {
+      setPage(1);
+    }
+    localStorage.setItem('users', JSON.stringify(users));
+  }, [users]);
+
+  useEffect(() => {
+    if (page !== 0) {
+      const getUsers = async () => {
+        try {
+          const newUsers = await fetchUsers(page);
+          const totalUser = await fetchTotalUser();
+          setTotal(totalUser);
+          setUsers(prevState => [...prevState, ...newUsers]);
+        } catch (error) {
+          console.log(error.message);
+        }
+      };
+
+      getUsers();
+    }
+  }, [page]);
 
   const handleClick = (status, name) => {
     if (status === true) {
@@ -25,21 +57,6 @@ const Tweets = () => {
         }
       });
   };
-
-  useEffect(() => {
-    const getUsers = async () => {
-      try {
-        const newUsers = await fetchUsers(page);
-        const totalUser = await fetchTotalUser();
-        setTotal(totalUser);
-        setUsers(prevState => [...prevState, ...newUsers]);
-      } catch (error) {
-        console.log(error.message);
-      }
-    };
-
-    getUsers();
-  }, [page]);
 
   const pageCount = () => {
     setPage(prevState => prevState + 1);

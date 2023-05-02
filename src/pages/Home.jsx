@@ -9,7 +9,7 @@ const Home = () => {
         display="flex"
         alignItems="center"
         flexDirection="column"
-        pt="25vw"
+        pt="25vh"
         as="main"
       >
         <h1 style={{ marginBottom: 26 }}>Subscribe to something interesting</h1>
