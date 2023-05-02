@@ -1,7 +1,7 @@
 import { Box } from 'components/Box';
 import { Hero } from 'components/Hero/Hero';
 import { LogoComponent } from 'components/Logo/Logo';
-import { AvatarBg, AvatarCover, Delimiter } from './Twit.styled';
+import { AvatarBg, AvatarCover } from './Twit.styled';
 import { UserAvatar } from 'components/UserAvatar/UserAvatar';
 import { StatisticInfo } from 'components/StatisticInfo/StatisticInfo';
 import { Button } from 'components/Button/Button';
@@ -33,7 +33,6 @@ export const Twit = ({ user, onClick }) => {
     >
       <LogoComponent />
       <Hero />
-      <Delimiter />
       <AvatarCover>
         <AvatarBg>
           <UserAvatar avatar={avatar} />
